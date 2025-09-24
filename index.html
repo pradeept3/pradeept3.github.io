@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pradeep Tripathy — Portfolio & CV</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Landing page for Pradeep Tripathy with links to projects, contact, and downloadable CV (PDF)." />
+    <meta name="author" content="Pradeep Tripathy" />
+
+    <!-- Open Graph (optional) -->
+    <meta property="og:title" content="Pradeep Tripathy — Portfolio & CV" />
+    <meta property="og:description" content="View and download my CV, explore projects, and get in touch." />
+    <meta property="og:type" content="website" />
+
+    <style>
+      :root {
+        --bg: #0b1020;           /* deep blue-black */
+        --card: #111831;
+        --text: #e9eefb;
+        --muted: #b8c2e0;
+        --accent: #6ea8ff;       /* soft blue */
+        --accent-2: #9ee8c6;     /* mint */
+        --shadow: 0 20px 50px rgba(0,0,0,.35);
+        --radius: 22px;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 800px at 20% -10%, #1a2454 0%, transparent 60%),
+                    radial-gradient(900px 700px at 120% 10%, #123a4a 0%, transparent 60%),
+                    var(--bg);
+        line-height: 1.4;
+      }
+      a { color: inherit; }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 20px 80px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+      header nav a {
+        text-decoration: none;
+        color: var(--muted);
+        margin-left: 18px;
+        font-weight: 600;
+        opacity: .9;
+      }
+      header nav a:hover { color: var(--text); }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 36px;
+        align-items: center;
+        margin-top: 34px;
+      }
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; }
+      }
+
+      .card {
+        background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+        border: 1px solid rgba(255,255,255,.06);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+      .hero .intro {
+        padding: 36px;
+      }
+      .title {
+        font-size: clamp(28px, 5vw, 48px);
+        line-height: 1.05;
+        margin: 0 0 12px 0;
+        letter-spacing: .3px;
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: clamp(14px, 2.2vw, 18px);
+        margin-bottom: 22px;
+      }
+
+      .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #0b1220;
+        padding: 14px 18px;
+        border-radius: 999px;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(110,168,255,.35);
+        transition: transform .1s ease, box-shadow .2s ease, filter .2s ease;
+      }
+      .btn:hover { transform: translateY(-1px); filter: brightness(1.03); }
+      .btn:active { transform: translateY(0); }
+
+      .ghost {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid rgba(255,255,255,.2);
+        box-shadow: none;
+      }
+      .ghost:hover { background: rgba(255,255,255,.06); }
+
+      .pdf-viewer {
+        padding: 12px;
+      }
+      .pdf-frame {
+        width: 100%;
+        height: min(80vh, 880px);
+        border: none;
+        border-radius: calc(var(--radius) - 6px);
+        background: #0f142a;
+      }
+      .note {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 8px;
+      }
+
+      footer {
+        margin-top: 48px;
+        color: var(--muted);
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .chip {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,.18);
+        background: rgba(255,255,255,.05);
+        margin-right: 6px;
+      }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header aria-label="Top navigation">
+        <div style="font-weight:900; letter-spacing:.5px;">PT</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="about">
+          <div class="card intro" role="region" aria-label="Intro">
+            <h1 class="title">Hi, I’m Pradeep Tripathy</h1>
+            <p class="subtitle">
+              MSBA candidate at Santa Clara University and software engineer with 12+ years’ experience across ERP, healthcare, finance, and telecom. I build data/ML products, optimization models, and clean visualizations.
+            </p>
+            <div class="cta-row">
+              <!-- Link to your CV PDF. Place your file next to this HTML and name it exactly `cv.pdf` -->
+              <a class="btn" href="cv.pdf" target="_blank" rel="noopener" aria-label="Open CV PDF in a new tab">View CV (PDF)</a>
+              <!-- Direct download link with a nice filename -->
+              <a class="btn ghost" href="cv.pdf" download="Pradeep_Tripathy_CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+            </div>
+            <p class="note">Tip: Put <code>cv.pdf</code> in the same folder as <code>index.html</code>. Both buttons will work automatically.</p>
+            <div class="chip" aria-hidden="true">Data Science</div>
+            <div class="chip" aria-hidden="true">Optimization</div>
+            <div class="chip" aria-hidden="true">Visualization</div>
+          </div>
+
+          <div class="card pdf-viewer" role="region" aria-label="Inline CV preview">
+            <!-- Inline PDF preview (shows in most browsers). Fallback text provided. -->
+            <iframe class="pdf-frame" src="cv.pdf#view=FitH" title="Embedded CV PDF"></iframe>
+            <p class="note">If the PDF preview does not load, use the buttons to view or download above.</p>
+          </div>
+        </section>
+
+        <section id="projects" style="margin-top: 48px;" aria-label="Selected projects">
+          <div class="card" style="padding: 28px;">
+            <h2 style="margin:0 0 12px 0;">Selected Projects</h2>
+            <ul style="margin:0; padding-left: 18px; color: var(--muted);">
+              <li>Semiconductor parts‑kit analysis (frequent‑itemset mining, AutoGluon, Tableau dashboards).</li>
+              <li>EV charging site optimization (Gurobi MIP, renewable integration, interactive maps).</li>
+              <li>Global development insights (World Bank + HDI, R + Tableau, reproducible pipelines).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="contact" style="margin-top: 24px;" aria-label="Contact details">
+          <div class="card" style="padding: 24px; display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+            <div>
+              <h2 style="margin:0 0 6px 0;">Let’s connect</h2>
+              <p class="note" style="margin:0;">Email: <a href="mailto:pradeep@example.com" aria-label="Send me an email">pradeep@example.com</a></p>
+            </div>
+            <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>&copy; <span id="year"></span> Pradeep Tripathy</div>
+        <div>Built with semantic HTML, accessible controls, and a lightweight CSS theme.</div>
+      </footer>
+    </div>
+
+    <script>
+      // Update year automatically
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
